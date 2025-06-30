@@ -19,6 +19,7 @@ contract Stablecoin is ERC20, Ownable {
 
     /// @notice Burn tokens from any address (only owner can call)
     function burnFrom(address account, uint256 amount) external onlyOwner {
-        _burn(account, amount);
-    }
+//        _burn(msg.sender, amount);
+	_burn(account, amount);  
+  }
 }
