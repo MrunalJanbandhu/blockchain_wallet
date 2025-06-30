@@ -11,7 +11,7 @@ export default function BurnForm() {
     e.preventDefault();
     try {
       const res = await axios.post('http://localhost:4000/token/burn', { from, amount }, {
-        headers: { 'x-wallet-address': from }
+        headers: { 'x-wallet-address': '0xeA41566905a271B8433fDa0727daEf585e2480B2' }
       });
       setTxHash(res.data.txHash);
     } catch (err) {
